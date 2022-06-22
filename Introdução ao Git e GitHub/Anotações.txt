@@ -109,6 +109,6 @@ enviá-lo novamente.
 
 (git pull origin master) para puxar o repositório do Github para a máquina.
 (git remote -v) Tras os repositórios remotos onde está apontado os arquivos ou pasta.
-(ls -a) Mostra os repositórios ocultos..
+(ls -a) Mostra os repositórios ocultos.
 
 
