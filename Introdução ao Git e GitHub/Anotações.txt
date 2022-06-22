@@ -1,0 +1,112 @@
+- Link para download do Git: https://git-scm.com/downloads
+
+- Lista de comandos básicos:
+(cd) Vai para o diretorio principal do windows.
+(dir) lista todas pastas no diretório.
+(mkdir) para criar uma pasta.
+(rmdir) deleta pasta ou arquivo selecionado.
+(cd ..) para voltar pasta.
+(clear) limpa o terminal.
+(tecla TAB) Completa a palvra da pasta ou arquivo colocando a primeira letra e depois TAB.
+(ls) para listar as pastas e arquivos.
+(pwd) mostra o caminho completo.
+
+-Comandos Git
+(openssl sha1) Para gerar uma chave algoritmo de criptação e identificação.
+
+Como gerar a chave SSH para adicionar ao GITHUB:
+(ssh-keygen -t ed25519 -c (inserir o email e digitar enter)
+inserir uma senha > enter > irá aparecer o local onde se encontra as chaves,
+clicar em enter e digitar a senha.
+para visualizar as chaves: (cd /c/users/Tiago/.ssh/
+
+Para listar as chaves.
+(ls)
+irá aparecer duas chaves uma publica e outra privada. 
+
+Para visualizar a chave com o comando:
+(cat id_ed25519.pub) irá mostrar a chave pública para acrescentar ao github.
+
+SSH Agent (encarregado de lidar com as chaves)
+
+Comando: (eval $(ssh-agent -s)) -irá aparece o código.
+
+Para entregar a chave privada
+comando: (ssh - add id_ed25519) vai pedir a senha criada.
+
+Para clonar no Git Hub o repositorio:
+(Ir em Code > copiar o SSH)
+
+Para inserir o repositório copiado.
+(git clone >colar o caminho SSH copiado do GitHub.) Selecionar Yes.
+
+
+-Criando o Primeiro Repositório no GitHub.
+
+Abrir o Git Bash na pasta desejada.
+
+(git init) Para iniciar o novo repositório dentro da pasta. 
+(ls -a) Para mostrar os arquivos ocultos dentro da pasta.
+
+-Configurações iniciais para o GIT.
+Fornecer um autor, que será email e um usuario.
+
+Email (git config --global user.email (escrever email desejado)).
+Usuário (git config --global user.name (escrever o nome de usuario)).
+
+-Criando um Arquivo dentro da Pasta usando o Markdown.
+
+Crie um arquivo com final .MD
+
+-Identificar o commit
+(git add* enter)
+(git commit -m "commit inicial")
+
+
+-Ciclo de vida dos Arquivos.
+
+Git init =>
+
+Arquivo Unblacked = Quando o Git ainda não sabe do arquivo.
+Arquivo unmodified = Quando o arquivo ainda não sofreu modificação.
+Arquivo modified = Quando o arquivo sofreu modificação, é alterado seu SHA1 (Código).
+Staged = Quando se da o commit, eles passam para o unmodified e diz que acabou todas alterações do arquivo,
+e volta novamente para aguardar novas modificações. 
+
+-Trabalhando com o Git Hub.
+
+(Git config --list) Para listar as configurações do Git.
+(Git config --global --unset user.email) Para alterar o email.
+(Git config --global --unset user.name) Para alterar o usuário.
+
+-Para adicionar ao Git Hub.
+
+seus repositórios > novo > criar nome > adicionar uma descrição > selecionar o público > creat repositório >
+copiar a URL > Abrir o Git Bash > apontar nosso repositório com o comando (git remot add origin (colar URL do github).
+
+(git remote -v) Lista as listas do repositório remoto.
+
+origin é um apelido atribuido ao arquivo para facil localização.
+
+(git status) Para verificar se não há nenhuma pendencia no repositório.
+(git push origin master) vai pedir login e senha - Etapa para enviar ao github.
+
+
+-Resolvendo conflitos.
+
+Se der erro na hora de enviar o repositório novamente para o Github por motivo de alguém ter feito alguma ateração no
+repositório original do github, deve-se puxar o repositório original do github na máquina, e editá-lo para depois
+enviá-lo novamente. 
+
+(git pull origin master) para puxar o repositório do Github para a máquina.
+(git remote -v) Tras os repositórios remotos onde está apontado os arquivos ou pasta.
+(ls -a) Mostra os repositórios ocultos.
+
+
+
+
+
+
+
+
+
