@@ -91,6 +91,15 @@ origin é um apelido atribuido ao arquivo para facil localização.
 (git status) Para verificar se não há nenhuma pendencia no repositório.
 (git push origin master) vai pedir login e senha - Etapa para enviar ao github.
 
+-PARA ATUALIZAR AS PASTAS E REPOSITÓRIOS MODIFICADOS NO COMPUTADOR PARA O GITHUB.
+(git status) Vai identificar em vermelho que algum arquivo foi modificado ou adicionado.
+(git add .) Para adcionar os arquivos e pastas modificados.
+(git status) Vai identificar que os arquivos foram adcionados ao controle de versão local para enviar o Github.
+(git commit -m "Mensagem que irá aparecer no github") Vai criar um commit para os arquivos.
+(git status) Vai mostrar que tem um commit local pronto para envio.
+(git push origin main) Comando para enviar todos commits para a nuvem.
+
+
 
 -Resolvendo conflitos.
 
